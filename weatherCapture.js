@@ -56,7 +56,7 @@ spooky.on('console', function (line) {
 
 spooky.on('amqp', function (data) {
     //console.log(data);
-    amqp.connect('amqp://192.168.0.6').then(function(conn) {
+    amqp.connect('amqp://your_mqhost').then(function(conn) {
     return when(conn.createChannel().then(function(ch) {
       console.log(data);
       var q = data['queue'];
